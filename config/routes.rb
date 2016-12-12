@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get root to: 'resources#index'
 
+  resources :tags, only: [:create]
+
   resources :resources, only: [:index, :show]
 
   namespace :api, defaults: { format: :json } do

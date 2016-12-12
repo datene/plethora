@@ -1,0 +1,7 @@
+ // Create a paragraph for the new review. But hide it.
+  var new_tag = $("<%= j render 'tags/show', tag: @tag %>").hide();
+  // Add it to the DOM, at the end of the existing reviews. It's still hidden.
+  $('#tags-<%= @tag.resource_id %> .tags').append(new_tag);
+  // Show the new review with an animation!
+  new_tag.slideDown();
+  $('#tags-<%= @tag.resource_id %> #tag_title').val("");

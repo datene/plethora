@@ -1,13 +1,33 @@
+<% unless params[:filter].nil? %>
+<h2>
+  Search results
+</h2>
+<% end %>
+
+<% if @resources.blank? %>
+<p>
+  Add some resources!
+</p>
+<% else %>
 <ul>
   <% @resources.each do |resource| %>
   <li>
-    <%= link_to resource.title, resource.url %>
+    <%= render 'resources/show', resource: resource %>
+    <% if resource.tags.blank? %>
     <p>
-      <%= resource.description %>
+      Add your first tag!
     </p>
-    <p>
-      <%= resource.created_at %>
-    </p>
+    <% else %>
+    <div id="tags-<%= resource.id %>">
+      <div class="tags">
+        <% resource.tags.each do |tag| %>
+        <%= render 'tags/show', tag: tag %>
+        <% end %>
+      </div>
+      <% end %>
+      <%= render 'tags/new', tag: @tag, resource: resource %>
+    </div>
   </li>
   <% end %>
 </ul>
+<% end %>

@@ -32,7 +32,7 @@ class Api::V1::ResourcesController < Api::V1::BaseController
   private
 
   def resource_params
-    params.permit(:title, :url, :description)
+    params.permit(:title, :url, :description, :favicon_url)
   end
 
   def render_error
