@@ -9,6 +9,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
 
+# For API functionalities
+gem 'pundit'
+gem "simple_token_authentication"
+
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
