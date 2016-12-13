@@ -13,6 +13,10 @@ gem 'redis'
 gem 'pundit'
 gem "simple_token_authentication"
 
+# For image upload
+gem 'cloudinary', '1.1.0'
+gem 'carrierwave'
+
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'

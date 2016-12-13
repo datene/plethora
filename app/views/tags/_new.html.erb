@@ -1,5 +1,5 @@
 <%= simple_form_for tag, remote: true do |f| %>
-  <%= f.input :title, as: :text %>
+  <%= f.input :title %>
   <%= f.input :resource_id, as: :hidden, input_html: { value: resource.id } %>
   <%= f.button :submit %>
 <% end %>

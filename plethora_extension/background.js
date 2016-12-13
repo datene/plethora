@@ -5,6 +5,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   var resource = {
     "title": tab.title,
     "url": tab.url,
+    "favicon_url": tab.favIconUrl,
     "X-User-Email": username,
     "X-User-Token": api_key
   };

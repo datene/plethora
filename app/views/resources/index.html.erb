@@ -13,18 +13,18 @@
   <% @resources.each do |resource| %>
   <li>
     <%= render 'resources/show', resource: resource %>
-    <% if resource.tags.blank? %>
-    <p>
-      Add your first tag!
-    </p>
-    <% else %>
     <div id="tags-<%= resource.id %>">
       <div class="tags">
+        <% if resource.tags.blank? %>
+        <p>
+          Add your first tag!
+        </p>
+        <% else %>
         <% resource.tags.each do |tag| %>
         <%= render 'tags/show', tag: tag %>
         <% end %>
+        <% end %>
       </div>
-      <% end %>
       <%= render 'tags/new', tag: @tag, resource: resource %>
     </div>
   </li>

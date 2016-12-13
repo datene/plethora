@@ -18,3 +18,4 @@
 <p>
   Resource saved by: <%= resource.user.email %>
 </p>
+ <%= cl_image_tag current_user.photo.url(:square_crop), class: "avatar-large" %>
